@@ -6,3 +6,4 @@ const getFilmData = async () => {
 	console.log(films);
 }
 getFilmData()
+
