@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+.main-container {
+	font-family: "Orbitron", sans-serif;
+	background-image: url('../assets/starship2.webp');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh;
+	color: white;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+}
+.headline {
+	font-size: 4rem;
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+
+.content-container {
+	width: 450px;
+	height: 160px;
+	background-color: lightgrey;
+	border-radius: 0.5rem;
+	opacity: 40%;
+}
+
+.back-button {
+	background: linear-gradient(#37F3FF, #C1FBFF);
+	width: 6rem;
+	height: 3rem;
+	border-radius: 1rem;
+	margin-top: 2rem;
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+
+.back-button:hover {
+	background: linear-gradient(#17bfca, #a5ebf0);
+}
+
+.container-1 {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.container-2 {
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
+
+.container-3 {
+	grid-column: 2/3;
+	grid-row: 4/5;
+}
+
+.container-4 {
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+
+.container-5 {
+	grid-column: 4/5;
+	grid-row: 3/4;
+}
+
+.container-6 {
+	grid-column: 4/5;
+	grid-row: 4/5;
+}
+
+/*MEDIA QUERIES*/
+/*TABLET*/
+@media screen and (max-width: 1200px) {
+	.main-container {
+		gap: 1rem;
+	}
+
+	.content-container {
+		width: 400px;
+		height: 140px;
+	}
+}
+
+/*SMALL TABLET*/ 
+@media screen and (max-width: 1000px) {
+	.main-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+		gap: 0.3rem;
+	}
+	.content-container {
+		width: 355px;
+		height: 120px;
+	}
+	.headline {
+		grid-column: 2/3;
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	.back-button {
+		grid-column: 1/2;
+		margin: 1rem;
+		width: 4rem;
+		height: 2rem;
+	}
+	
+	.content-container {
+		width: 355px;
+		height: 100px;
+	}
+
+	.container-1 {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+	
+	.container-2 {
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
+	
+	.container-3 {
+		grid-column: 2/3;
+		grid-row: 4/5;
+	}
+	
+	.container-4 {
+		grid-column: 2/3;
+		grid-row: 5/6;
+	}
+	
+	.container-5 {
+		grid-column: 2/3;
+		grid-row: 6/7;
+	}
+	
+	.container-6 {
+		grid-column: 2/3;
+		grid-row: 7/8;
+	}
+}
+/*MOBILE*/ 
+@media screen and (max-width: 550px) {
+	.content-container {
+		width: 300px;
+	}
+
+	.back-button {
+		margin: 0;
+	}
+
+	.headline {
+		margin-bottom: 0;
+	}
+}
+
+
