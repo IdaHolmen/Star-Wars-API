@@ -1,4 +1,8 @@
+/*FONTS FROM GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*STYLING MAIN PAGE*/
 .main-container {
 	font-family: "Orbitron", sans-serif;
 	background-image: url('../assets/starship2.webp');
@@ -7,154 +11,117 @@
     background-repeat: no-repeat; 
     height: 100vh;
 	color: white;
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-}
-.headline {
-	font-size: 4rem;
-	grid-row: 1/2;
-	grid-column: 3/4;
 }
 
-.content-container {
-	width: 450px;
-	height: 160px;
-	background-color: lightgrey;
-	border-radius: 0.5rem;
-	opacity: 40%;
+/*HEADER*/
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+
+.headline {
+	font-size: 4rem;
+	flex-basis: 90%;
+	display: flex;
+	justify-content: center;
+	margin-left: 7rem;
 }
 
 .back-button {
 	background: linear-gradient(#37F3FF, #C1FBFF);
-	width: 6rem;
+	max-width: 6rem;
 	height: 3rem;
-	border-radius: 1rem;
-	margin-top: 2rem;
-	grid-row: 1/2;
-	grid-column: 2/3;
+	border-radius: 0.5rem;
+	flex-basis: 10%;
+	border: 1px solid white;
 }
 
 .back-button:hover {
 	background: linear-gradient(#17bfca, #a5ebf0);
 }
 
-.container-1 {
-	grid-column: 2/3;
-	grid-row: 2/3;
+/*USING INTER FOR BETTER READABILITY*/
+.sub-container {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	font-family: "Inter", sans-serif;
 }
 
-.container-2 {
-	grid-column: 2/3;
-	grid-row: 3/4;
+.list-container {
+	display: flex;
+	text-align: center;
+	font-size: larger;
+	background-color: white;
+	border-radius: 10px;
+	color: black;
+	width: 90vw;
 }
 
-.container-3 {
-	grid-column: 2/3;
-	grid-row: 4/5;
+.title {
+	flex-basis: 15%;
+	margin-left: 1rem;
 }
 
-.container-4 {
-	grid-column: 4/5;
-	grid-row: 2/3;
+.year {
+	flex-basis: 15%;
 }
 
-.container-5 {
-	grid-column: 4/5;
-	grid-row: 3/4;
+.director {
+	flex-basis: 15%;
 }
 
-.container-6 {
-	grid-column: 4/5;
-	grid-row: 4/5;
+.producers {
+	flex-basis: 15%;
 }
 
-/*MEDIA QUERIES*/
-/*TABLET*/
-@media screen and (max-width: 1200px) {
-	.main-container {
-		gap: 1rem;
-	}
-
-	.content-container {
-		width: 400px;
-		height: 140px;
-	}
+.characters {
+	flex-basis: 25%;
 }
 
-/*SMALL TABLET*/ 
-@media screen and (max-width: 1000px) {
-	.main-container {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(7, 1fr);
-		gap: 0.3rem;
-	}
-	.content-container {
-		width: 355px;
-		height: 120px;
-	}
-	.headline {
-		grid-column: 2/3;
-		font-size: 3rem;
-		text-align: center;
-	}
-
-	.back-button {
-		grid-column: 1/2;
-		margin: 1rem;
-		width: 4rem;
-		height: 2rem;
-	}
-	
-	.content-container {
-		width: 355px;
-		height: 100px;
-	}
-
-	.container-1 {
-		grid-column: 2/3;
-		grid-row: 2/3;
-	}
-	
-	.container-2 {
-		grid-column: 2/3;
-		grid-row: 3/4;
-	}
-	
-	.container-3 {
-		grid-column: 2/3;
-		grid-row: 4/5;
-	}
-	
-	.container-4 {
-		grid-column: 2/3;
-		grid-row: 5/6;
-	}
-	
-	.container-5 {
-		grid-column: 2/3;
-		grid-row: 6/7;
-	}
-	
-	.container-6 {
-		grid-column: 2/3;
-		grid-row: 7/8;
-	}
-}
-/*MOBILE*/ 
-@media screen and (max-width: 550px) {
-	.content-container {
-		width: 300px;
-	}
-
-	.back-button {
-		margin: 0;
-	}
-
-	.headline {
-		margin-bottom: 0;
-	}
+.movie-image {
+	margin-right: 1rem;
+	flex-basis: 15%;
 }
 
+/*IN CASE OF ERROR*/ 
+.error-message {
+	color: red;
+	background-color: rgba(253, 232, 232, 0.773);
+	font-size: 2rem;
+	padding: 1rem;
+	margin-top: 5rem;
+	border-radius: 0.5rem;
+	border: 1px solid red;
+}
 
+.refresh-button {
+	font-family: 'Orbitron', sans-serif;
+	font-size: large;
+	background-image: url(../assets/arrows-rotate-light.svg);
+	background-size: 20%;
+	background-position: right 50%;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	height: 3rem;
+	width: 8rem;
+	background-color: #55a630;
+	color: black;
+	padding: 0.5rem;
+	margin: 2rem;
+	border-radius: 0.5rem;
+	border: 0.5px solid white;
+}
+
+.refresh-button:hover {
+	background-color: #83c066;
+}
+
+.refresh-button:active {
+	background-color: #357d14;
+}
