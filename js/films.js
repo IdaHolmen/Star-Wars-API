@@ -22,8 +22,7 @@ const getFilmData = async () => {
 		refreshButton.addEventListener('click', ()=> {
 			window.location.reload()
 		});
-	}
-	
+	};
 }
 getFilmData()
 
