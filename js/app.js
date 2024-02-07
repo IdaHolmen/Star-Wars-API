@@ -1,3 +1,77 @@
+const subContainer = document.querySelector('.sub-container');
+const ul = document.querySelector('ul');
 
+//MAKING BACK BUTTON FUNCTIONAL
+const backButton = document.querySelector('.back-button');
+backButton.addEventListener('click', ()=> {
+	window.location.href = 'index.html';
+});
+
+//FETCHING FROM API
+const getFilmData = async () => {
+	try {
+		const response = await fetch('https://swapi.dev/api/films/');
+		const data = await response.json()
+		const films = data.results;
+		console.log(films);
+
+		renderFilmData(films);
+
+	} catch (error) {
+		const errorMessage = document.createElement('div');
+		errorMessage.classList.add('error-message');
+		errorMessage.textContent = 'An error has occurred. Please try again!'
+		subContainer.append(errorMessage);
+
+		const refreshButton = document.createElement('button');
+		refreshButton.classList.add('refresh-button');
+		refreshButton.textContent = 'Refresh';
+		subContainer.append(refreshButton);
+
+		refreshButton.addEventListener('click', ()=> {
+			window.location.reload()
+		});
+
+		renderFilmData([]);
+	};
+}
+getFilmData();
+
+function renderFilmData(films) {
+	films.forEach(film => {
+		//CREATE ELEMENTS
+		const filmList = document.createElement('li');
+		const filmTitle = document.createElement('span');
+		const filmYear = document.createElement('span');
+		const filmDirector = document.createElement('span');
+		const filmProducers = document.createElement('span');
+		const filmCharacters = document.createElement('span');
+		const filmImage = document.createElement('img');
+
+		//APPEND ELEMENTS
+		ul.append(filmList);
+		filmList.append(filmTitle, filmYear, filmDirector, filmProducers, filmCharacters, filmImage);
+
+		//SETTING CONTENT TO CREATED ELEMENTS
+		filmTitle.textContent = film.title;
+		filmYear.textContent = film.release_date;
+		filmDirector.textContent = film.director;
+		filmProducers.textContent = film.producer;
+		filmCharacters.textContent = film.characters.length;
+
+		//ADDING CLASSES TO THE ELEMENTS
+		filmList.classList.add('createdList');
+		filmTitle.classList.add('filmTitle');
+		filmYear.classList.add('filmYear');
+		filmDirector.classList.add('filmDirector');
+		filmProducers.classList.add('filmProducers');
+		filmCharacters.classList.add('filmCharacters');
+		filmImage.classList.add('filmImage');
+
+		//ADDING IMAGES 
+		const imageName = film.title.replace(/\s+/g, '-');
+        filmImage.src = `./assets/${imageName}.jpg`;
+	});
+}
 
 
