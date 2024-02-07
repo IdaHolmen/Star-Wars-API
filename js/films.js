@@ -8,14 +8,14 @@ backButton.addEventListener('click', ()=> {
 });
 
 //FETCHING FROM API
-const getFilmData = async () => {
+const getData = async () => {
 	try {
 		const response = await fetch('https://swapi.dev/api/films/');
 		const data = await response.json()
 		const films = data.results;
 		console.log(films);
 
-		renderFilmData(films);
+		renderData(films);
 
 	} catch (error) {
 		const errorMessage = document.createElement('div');
@@ -32,12 +32,12 @@ const getFilmData = async () => {
 			window.location.reload()
 		});
 
-		renderFilmData([]);
+		renderData([]);
 	};
 }
-getFilmData();
+getData();
 
-function renderFilmData(films) {
+function renderData(films) {
 	films.forEach(film => {
 		//CREATE ELEMENTS
 		const filmList = document.createElement('li');
@@ -54,7 +54,10 @@ function renderFilmData(films) {
 
 		//SETTING CONTENT TO CREATED ELEMENTS
 		filmTitle.textContent = film.title;
-		filmYear.textContent = film.release_date;
+		//I WANT JUST THE YEAR AND NOT THE DATE
+		//USING SPLIT METHOD TO SEPERATE WHERE THE '-' IS AND JUST USING THE FIRST PART (YEAR) 
+		const releaseYear = film.release_date.split('-')[0];
+        filmYear.textContent = releaseYear;
 		filmDirector.textContent = film.director;
 		filmProducers.textContent = film.producer;
 		filmCharacters.textContent = film.characters.length;

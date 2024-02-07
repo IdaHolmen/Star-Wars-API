@@ -1,0 +1,27 @@
+.name, .planetName {
+	flex-basis: 15%;
+	margin-left: 1rem;
+}
+
+.climate, .planetClimate {
+	flex-basis: 15%;
+}
+
+.diameter, .planetDiameter {
+	flex-basis: 15%;	
+}
+
+.population, .planetPopulation {
+	flex-basis: 25%;
+}
+
+.orbit, .planetOrbit {
+	flex-basis: 20%;
+}
+
+.planet-image, .planetImage, img{
+	margin-right: 1rem;
+	flex-basis: 15%;
+	max-width: 55px;
+	height: auto;
+}
