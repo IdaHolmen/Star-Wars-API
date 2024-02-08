@@ -7,14 +7,19 @@ backButton.addEventListener('click', ()=> {
 	window.location.href = 'index.html';
 });
 
+//ADDING PAGE LOADER
+const pageLoader = document.createElement('div');
+pageLoader.classList.add('loader');
+subContainer.append(pageLoader);
+
 //FETCHING FROM API
 const getData = async () => {
 	try {
 		const response = await fetch('https://swapi.dev/api/films/');
 		const data = await response.json()
 		const films = data.results;
-		console.log(films);
 
+		subContainer.removeChild(pageLoader);
 		renderData(films);
 
 	} catch (error) {
@@ -31,8 +36,7 @@ const getData = async () => {
 		refreshButton.addEventListener('click', ()=> {
 			window.location.reload()
 		});
-
-		renderData([]);
+		subContainer.removeChild(pageLoader);
 	};
 }
 getData();
