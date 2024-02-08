@@ -1,0 +1,31 @@
+.name, .vehicleName {
+	flex-basis: 20%;
+	margin-left: 1rem;
+}
+
+.model, .vehicleModel {
+	flex-basis: 20%;
+}
+
+.manufacturer, .vehicleManufacturer {
+	flex-basis: 20%;	
+}
+
+.crew, .vehicleCrew {
+	flex-basis: 15%;
+}
+
+.length, .vehicleLength {
+	flex-basis: 15%;
+}
+
+.vehicle-image, .vehicleImage, img{
+	margin-right: 1rem;
+	flex-basis: 10%;
+	max-width: 80px;
+	height: auto;
+}
+
+.index3 {
+	background-image: url(../assets/starfighter.jpg);
+}

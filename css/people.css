@@ -1,0 +1,27 @@
+.name, .personName {
+	flex-basis: 20%;
+	margin-left: 1rem;
+}
+
+.birth-year, .birthYear {
+	flex-basis: 15%;
+}
+
+.eye-color, .eyeColor {
+	flex-basis: 15%;	
+}
+
+.gender, .personGender {
+	flex-basis: 20%;
+}
+
+.height, .personHeight {
+	flex-basis: 20%;
+}
+
+.person-image, .personImage, img{
+	margin-right: 1rem;
+	flex-basis: 15%;
+	max-width: 55px;
+	height: auto;
+}

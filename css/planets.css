@@ -1,5 +1,5 @@
 .name, .planetName {
-	flex-basis: 15%;
+	flex-basis: 20%;
 	margin-left: 1rem;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .population, .planetPopulation {
-	flex-basis: 25%;
+	flex-basis: 20%;
 }
 
 .orbit, .planetOrbit {
@@ -22,6 +22,6 @@
 .planet-image, .planetImage, img{
 	margin-right: 1rem;
 	flex-basis: 15%;
-	max-width: 55px;
+	max-width: 70px;
 	height: auto;
 }
