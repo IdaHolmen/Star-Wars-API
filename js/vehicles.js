@@ -54,7 +54,7 @@ function renderData(vehicles) {
 		vehicleContainer.append(vehicleText, vehicleImage);
 
 		//SETTING CONTENT TO CREATED ELEMENTS
-		vehicleText.textContent = `Name: ${vehicle.name}, Model ${vehicle.model}, Manufacturer: ${vehicle.manufacturer}, Crew: ${vehicle.crew}, Length: ${vehicle.length} m`;
+		vehicleText.textContent = `Name: ${vehicle.name}, Model: ${vehicle.model}, Manufacturer: ${vehicle.manufacturer}, Crew: ${vehicle.crew}, Length: ${vehicle.length} meters`;
 
 		//ADDING CLASSES TO THE ELEMENTS
 		vehicleContainer.classList.add('contentContainer');

@@ -1,0 +1,55 @@
+/*FONTS FROM GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+	/*FONTS*/
+	--font-family-headlines: "Orbitron", sans-serif;
+	--font-family-data-text: "Inter", sans-serif;
+
+	/*BACKGROUNDS*/
+	--background-image-desktop: url('../assets/starship2.webp');
+	--background-image-tablet: url('../assets/stars-tablet-2.webp');
+	--background-image-mobile: url('../assets/mobile-layout-stars.webp');
+
+	/*COLORS*/
+	--color-primary: white;
+	--color-secondary: black;
+	--color-tertiary: #ffe820;
+	--color-accent: red;
+	--background-color-error: rgba(253, 232, 232, 0.773);
+	--background-color-container: rgba(211, 211, 211, 0.843);
+	--button-color-back: linear-gradient(#37F3FF, #C1FBFF);
+	--button-color-back-hover: linear-gradient(#17bfca, #a5ebf0);
+	--button-color-refresh: #55a630;
+	--button-color-refresh-hover: #83c066;
+	--button-color-refresh-active: #357d14;
+
+	/*FONT SIZES*/
+	--font-size-xxl: 6rem;
+	--font-size-xl: 5rem;
+	--font-size-large: 4rem;
+	--font-size-medium: 3rem;
+	--font-size-medium-small: 2.5rem;
+	--font-size-small: 2rem;
+	--font-size-tiny: 1.5rem;
+	--font-size-very-tiny: 1.2rem;
+	--font-size-base: 1rem;
+
+	/*SPACING USED FOR MARGINS AND GAPS*/
+	--spacing-xl: 5rem;
+	--spacing-medium-large: 3rem;
+	--spacing-medium: 2rem;
+	--spacing-medium-small: 1.5rem;
+	--spacing-base: 1rem;
+	--spacing-small: 0.5rem;
+	--spacing-tiny: 0.2rem;
+
+	/*BORDER RADIUS*/
+	--border-radius-normal: 0.5rem;
+
+	/*BORDERS*/
+	--border-white: 1px solid var(--color-primary);
+	--border-white-thin: 0.5px solid var(--color-primary);
+	--border-red: 1px solid var(--color-accent);
+}

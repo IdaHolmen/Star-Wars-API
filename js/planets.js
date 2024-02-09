@@ -53,7 +53,7 @@ function renderData(planets) {
 
 		//SETTING CONTENT TO CREATED ELEMENTS
 		planetText.textContent = `Name: ${planet.name}, Climate: ${planet.climate}, 
-		Population: ${planet.population}, Diameter: ${planet.diameter}, Orbital Period: ${planet.orbital_period} days`;
+		Population: ${planet.population}, Diameter: ${planet.diameter} km, Orbital Period: ${planet.orbital_period} days`;
 
 		//ADDING CLASSES TO THE ELEMENTS
 		planetContainer.classList.add('contentContainer');

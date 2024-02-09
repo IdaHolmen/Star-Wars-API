@@ -1,7 +1,13 @@
 This projects works by fetching data through SWAPI, a Star Wars API, and displaying it on this page. 
 Click the links for which information you would like to see, for example films, and a list of the films will be displayed on a new page.
-Background images are created by ChatGPT as to not infringe on any copyright laws. All other images are fetched from googling.
+
+Background images are created by ChatGPT as to not infringe on any copyright laws. 
+Fonts are from Google Fonts and the svg for the refresh button (in case of error) is from Font Awesome.
+All other images are fetched from googling.
 This is a study project and is not used commercially.
+
+Link to GitHub-repository:
+https://github.com/IdaHolmen/Star-Wars-API
 
 
 Links that I have used in this project:

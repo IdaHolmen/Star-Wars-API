@@ -1,44 +1,42 @@
-/*FONTS FROM GOOGLE FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-.main-page {
-	font-family: "Orbitron", sans-serif;
-	background-image: url('../assets/starship2.webp');
+/*MAIN PAGE STYLING*/
+.main-page, .main-container {
+	font-family: var(--font-family-headlines);
+	background-image: var(--background-image-desktop);
 	background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
     height: 100vh;
-	color: white;
+	color: var(--color-primary);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .headline {
-	font-size: 6rem;
+	font-size: var(--font-size-xxl);
+	color: var(--color-tertiary);
 }
 
 .info-text {
-	font-size: 2.5rem;
+	font-size: var(--font-size-small);
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: var(--spacing-base);
 }
 
 .link-container {
 	display: grid;
-	gap: 1rem;
+	gap: var(--spacing-base);
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 }
 
 .links {
-	font-size: 4rem;
+	font-size: var(--font-size-large);
 	cursor: pointer;
 }
 
 .links:hover {
-	color: red;
+	color: var(--color-accent);
 }
 
 .film-link {
@@ -61,44 +59,32 @@
 	grid-row: 4 / 5;
 }
 
-
 /*----------------------------------------------------------------------------------------*/
 /* GENERAL STYLING FOR FILMS, PLANETS, PEOPLE AND VEHICLES
-/*STYLING MAIN PAGE*/
-.main-container {
-	font-family: "Orbitron", sans-serif;
-	background-image: url('../assets/starship2.webp');
-	background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    height: 100vh;
-	color: white;
-}
-
 /*HEADER*/
 .header {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	margin-bottom: 2rem;
+	margin-bottom: var(--spacing-medium);
 }
 
 .headline-content {
-	font-size: 4rem;
+	font-size: var(--font-size-large);
 	grid-column: 4 / 5;
 }
 
 .back-button {
 	grid-column: 2 / 3;
-	background: linear-gradient(#37F3FF, #C1FBFF);
+	background: var(--button-color-back);
 	width: 6rem;
 	height: 3rem;
-	border-radius: 0.5rem;
-	border: 1px solid white;
+	border-radius: var(--border-radius-normal);
+	border: var(--border-white);
 	margin: auto;
 }
 
 .back-button:hover {
-	background: linear-gradient(#17bfca, #a5ebf0);
+	background: var(--button-color-back-hover);
 }
 
 
@@ -107,51 +93,52 @@
 	width: 100%;
 	height: 80%;
 	display: flex;
-	gap: 1.5rem;
+	gap: var(--spacing-medium-small);
 	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
-	font-family: "Inter", sans-serif; /*USING INTER FOR BETTER READABILITY*/
+	font-family: var(--font-family-data-text); /*USING INTER FOR BETTER READABILITY*/
 }
 
 .contentContainer {
-	background-color: rgba(211, 211, 211, 0.843);
-	border-radius: 0.5rem;
-	height: 160px;
-	width: 450px;
+	background-color: var(--background-color-container);
+	border-radius: var(--border-radius-normal);
+	height: 10rem;
+	width: 28.125rem;
 	display: flex;
 	align-items: center;
 }
 
 .contentText {
-	color: black;
-	font-size: 1.2rem;
+	color: var(--color-secondary);
+	font-size: var(--font-size-very-tiny);
 	font-weight: 500;
-	padding: 0.5rem;
+	padding: var(--spacing-small);
 }
 
 .contentImage, img{
-	margin-right: 1rem;
-	max-width: 100px;
-	height: 100px;
-	border-radius: 0.5rem;
+	margin-right: var(--spacing-base);
+	max-width: 6.25rem;
+	height: 6.25rem;
+	border-radius: var(--border-radius-normal);
 }
 
 
 /*IN CASE OF ERROR*/ 
 .error-message {
-	color: red;
-	background-color: rgba(253, 232, 232, 0.773);
-	font-size: 2rem;
-	padding: 1rem;
-	margin-top: 5rem;
-	border-radius: 0.5rem;
-	border: 1px solid red;
+	color: var(--color-accent);
+	background-color: var(--background-color-error);
+	text-align: center;
+	font-size: var(--font-size-small);
+	padding: var(--spacing-base);
+	margin-top: var(--spacing-xl);
+	border-radius: var(--border-radius-normal);
+	border: var(--border-red);
 }
 
 .refresh-button {
-	font-family: 'Orbitron', sans-serif;
-	font-size: large;
+	font-family: var(--font-family-headlines);
+	font-size: var(--font-size-very-tiny);
 	background-image: url(../assets/arrows-rotate-light.svg);
 	background-size: 20%;
 	background-position: right 50%;
@@ -160,29 +147,30 @@
 	align-items: center;
 	height: 3rem;
 	width: 8rem;
-	background-color: #55a630;
-	color: black;
-	padding: 0.5rem;
-	margin: 2rem;
-	border-radius: 0.5rem;
-	border: 0.5px solid white;
+	background-color: var(--button-color-refresh);
+	color: var(--color-secondary);
+	padding: var(--spacing-small);
+	margin: var(--spacing-medium);
+	border-radius: var(--border-radius-normal);
+	border: var(--border-white-thin);
 }
 
 .refresh-button:hover {
-	background-color: #83c066;
+	background-color: var(--button-color-refresh-hover);
 }
 
 .refresh-button:active {
-	background-color: #357d14;
+	background-color: var(--button-color-refresh-active);
 }
 
+/* A LOADER SO THAT USERS KNOW ITS LOADING*/
 .loader {
-	margin-top: 3rem;
-	border: 16px solid #ffe820; /* Changed it to Star Wars colors*/
-	border-top: 16px solid #000;
+	margin-top: var(--spacing-medium-large);
+	border: 0.75rem solid var(--color-tertiary); /* Changed it to Star Wars colors*/
+	border-top: 0.75rem solid var(--color-secondary);
 	border-radius: 50%;
-	width: 120px;
-	height: 120px;
+	width: 7.5rem;
+	height: 7.5rem;
 	animation: spin 2s linear infinite;
   }
   
