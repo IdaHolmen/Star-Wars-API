@@ -22,5 +22,5 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 ![Screenshot-front-page](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/94e7bc4f-b03e-4771-a7a6-9c9bac29dfe5)
 Front page where you can choose which category to learn more about.
 
-![Screenshot-front-page](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/c1af7cf0-2fa9-4ed7-a57d-67f803e10f18)
+![Screenshot-films](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/0c5d7ed9-f818-43bf-b367-85a98e71d8a8)
 Example picture
