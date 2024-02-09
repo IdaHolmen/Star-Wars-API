@@ -43,33 +43,21 @@ getData();
 function renderData(people) {
 	people.forEach(person => {
 		//CREATE ELEMENTS
-		const peopleList = document.createElement('li');
-		const personName = document.createElement('span');
-		const birthYear  = document.createElement('span');
-		const eyeColor = document.createElement('span');
-		const personGender = document.createElement('span');
-		const personHeight = document.createElement('span');
+		const personContainer = document.createElement('div');
+		const personText = document.createElement('div');
 		const personImage = document.createElement('img');
 
 		//APPEND ELEMENTS
-		ul.append(peopleList);
-		peopleList.append(personName, birthYear, eyeColor, personGender, personHeight, personImage);
+		subContainer.append(personContainer);
+		personContainer.append(personText, personImage);
 
 		//SETTING CONTENT TO CREATED ELEMENTS
-		personName.textContent = person.name;
-        birthYear.textContent = person.birth_year;
-		eyeColor.textContent = person.eye_color;
-		personGender.textContent = person.gender;
-		personHeight.textContent = person.height;
+		personText.textContent = `Name: ${person.name}, Birth Year: ${person.birth_year}, Eye Color: ${person.eye_color}, Gender: ${person.gender}, Height: ${person.height} cm`;
 
 		//ADDING CLASSES TO THE ELEMENTS
-		peopleList.classList.add('createdList');
-		personName.classList.add('personName');
-		birthYear.classList.add('birthYear');
-		eyeColor.classList.add('eyeColor');
-		personGender.classList.add('personGender');
-		personHeight.classList.add('personHeight');
-		personImage.classList.add('personImage');
+		personContainer.classList.add('contentContainer');
+		personText.classList.add('contentText');
+		personImage.classList.add('contentImage');
 
 		//ADDING IMAGES 
 		const imageName = person.name.replace(/\s+/g, '-');

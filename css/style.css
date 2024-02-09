@@ -61,64 +61,6 @@
 	grid-row: 4 / 5;
 }
 
-/*TABLET*/
-
-@media screen and (max-width: 1000px) and (max-height: 830px) {
-	.main-page {
-		background-image: url('../assets/stars-tablet-2.webp');
-	}
-
-	.headline {
-		font-size: 5rem;
-	}
-
-	.info-text {
-		font-size: 1.5rem;
-	}
-
-	.links {
-		font-size: 3rem;
-		margin: 1rem;
-	}
-
-	.link-container {
-		height: 600px;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		justify-content: center;
-	}
-}
-
-/*MOBILE*/
-
-@media screen and (max-width: 480px) {
-	.main-page {
-		background-image: url('../assets/mobile-layout-stars.webp');
-	}
-
-	.headline {
-		font-size: 3rem;
-	}
-
-	.info-text {
-		font-size: 1.5rem;
-	}
-
-	.links {
-		font-size: 2.5rem;
-		margin: 0.5rem;
-	}
-
-	.link-container {
-		height: 600px;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		justify-content: center;
-	}
-	
-}
 
 /*----------------------------------------------------------------------------------------*/
 /* GENERAL STYLING FOR FILMS, PLANETS, PEOPLE AND VEHICLES
@@ -135,27 +77,24 @@
 
 /*HEADER*/
 .header {
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
 	margin-bottom: 2rem;
 }
 
 .headline-content {
 	font-size: 4rem;
-	flex-basis: 80%;
-	display: flex;
-	justify-content: center;
-	margin-left: 11rem;
+	grid-column: 4 / 5;
 }
 
 .back-button {
+	grid-column: 2 / 3;
 	background: linear-gradient(#37F3FF, #C1FBFF);
-	max-width: 6rem;
+	width: 6rem;
 	height: 3rem;
 	border-radius: 0.5rem;
-	flex-basis: 20%;
 	border: 1px solid white;
-	margin-right: 4.3rem;
+	margin: auto;
 }
 
 .back-button:hover {
@@ -168,34 +107,36 @@
 	width: 100%;
 	height: 80%;
 	display: flex;
-	flex-direction: column;
+	gap: 1.5rem;
+	flex-flow: column wrap;
 	align-items: center;
-	justify-content: start;
+	justify-content: center;
 	font-family: "Inter", sans-serif; /*USING INTER FOR BETTER READABILITY*/
 }
 
-.list-container {
-	display: flex;
-	text-align: center;
-	font-size: 1.5rem;
-	font-weight: bold;
-	background-color: white;
-	border-radius: 10px;
-	color: black;
-	width: 90vw;
-}
-
-.createdList {
+.contentContainer {
 	background-color: rgba(211, 211, 211, 0.843);
 	border-radius: 0.5rem;
-	color: black;
-	font-weight: 600;
+	height: 160px;
+	width: 450px;
 	display: flex;
-	list-style: none;
-	text-align: center;
 	align-items: center;
-	margin-top: 0.5rem;
 }
+
+.contentText {
+	color: black;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 0.5rem;
+}
+
+.contentImage, img{
+	margin-right: 1rem;
+	max-width: 100px;
+	height: 100px;
+	border-radius: 0.5rem;
+}
+
 
 /*IN CASE OF ERROR*/ 
 .error-message {
@@ -236,7 +177,7 @@
 }
 
 .loader {
-	margin-top: 5rem;
+	margin-top: 3rem;
 	border: 16px solid #ffe820; /* Changed it to Star Wars colors*/
 	border-top: 16px solid #000;
 	border-radius: 50%;
@@ -245,7 +186,8 @@
 	animation: spin 2s linear infinite;
   }
   
-  @keyframes spin {
+@keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
+

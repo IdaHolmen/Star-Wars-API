@@ -1,5 +1,4 @@
 const subContainer = document.querySelector('.sub-container');
-const ul = document.querySelector('ul');
 
 //MAKING BACK BUTTON FUNCTIONAL
 const backButton = document.querySelector('.back-button');
@@ -18,6 +17,7 @@ const getData = async () => {
 		const response = await fetch('https://swapi.dev/api/planets/');
 		const data = await response.json()
 		const planets = data.results.slice(0, 6);
+		console.log(planets);
 
 		subContainer.removeChild(pageLoader);
 		renderData(planets);
@@ -43,38 +43,26 @@ getData();
 function renderData(planets) {
 	planets.forEach(planet => {
 		//CREATE ELEMENTS
-		const planetList = document.createElement('li');
-		const planetName = document.createElement('span');
-		const planetClimate  = document.createElement('span');
-		const planetDiameter = document.createElement('span');
-		const planetPopulation = document.createElement('span');
-		const planetOrbit = document.createElement('span');
+		const planetContainer = document.createElement('div');
+		const planetText = document.createElement('div');
 		const planetImage = document.createElement('img');
 
 		//APPEND ELEMENTS
-		ul.append(planetList);
-		planetList.append(planetName, planetClimate, planetDiameter, planetPopulation, planetOrbit, planetImage);
+		subContainer.append(planetContainer);
+		planetContainer.append(planetText, planetImage);
 
 		//SETTING CONTENT TO CREATED ELEMENTS
-		planetName.textContent = planet.name;
-        planetClimate.textContent = planet.climate;
-		planetDiameter.textContent = planet.diameter;
-		planetPopulation.textContent = planet.population;
-		planetOrbit.textContent = planet.orbital_period;
+		planetText.textContent = `Name: ${planet.name}, Climate: ${planet.climate}, 
+		Population: ${planet.population}, Diameter: ${planet.diameter}, Orbital Period: ${planet.orbital_period} days`;
 
 		//ADDING CLASSES TO THE ELEMENTS
-		planetList.classList.add('createdList');
-		planetName.classList.add('planetName');
-		planetClimate.classList.add('planetClimate');
-		planetDiameter.classList.add('planetDiameter');
-		planetPopulation.classList.add('planetPopulation');
-		planetOrbit.classList.add('planetOrbit');
-		planetImage.classList.add('planetImage');
+		planetContainer.classList.add('contentContainer');
+		planetText.classList.add('contentText');
+		planetImage.classList.add('contentImage');
 
 		//ADDING IMAGES 
 		const imageName = planet.name.replace(/\s+/g, '-');
         planetImage.src = `./assets/${imageName}.jpg`;
 	});
 }
-
 

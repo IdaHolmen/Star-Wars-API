@@ -45,33 +45,21 @@ function renderData(vehicles) {
 	//HAD TO ADD INDEX TO MANUALLY ADD IMAGE ON INDEX 3 (STARFIGHTER)
 	vehicles.forEach((vehicle, index) => {
 		//CREATE ELEMENTS
-		const vehicleList = document.createElement('li');
-		const vehicleName = document.createElement('span');
-		const vehicleModel  = document.createElement('span');
-		const vehicleManufacturer = document.createElement('span');
-		const vehicleCrew = document.createElement('span');
-		const vehicleLength = document.createElement('span');
+		const vehicleContainer = document.createElement('div');
+		const vehicleText = document.createElement('div');
 		const vehicleImage = document.createElement('img');
 
 		//APPEND ELEMENTS
-		ul.append(vehicleList);
-		vehicleList.append(vehicleName, vehicleModel, vehicleManufacturer, vehicleCrew, vehicleLength, vehicleImage);
+		subContainer.append(vehicleContainer);
+		vehicleContainer.append(vehicleText, vehicleImage);
 
 		//SETTING CONTENT TO CREATED ELEMENTS
-		vehicleName.textContent = vehicle.name;
-        vehicleModel.textContent = vehicle.model;
-		vehicleManufacturer.textContent = vehicle.manufacturer;
-		vehicleCrew.textContent = vehicle.crew;
-		vehicleLength.textContent = vehicle.length;
+		vehicleText.textContent = `Name: ${vehicle.name}, Model ${vehicle.model}, Manufacturer: ${vehicle.manufacturer}, Crew: ${vehicle.crew}, Length: ${vehicle.length} m`;
 
 		//ADDING CLASSES TO THE ELEMENTS
-		vehicleList.classList.add('createdList');
-		vehicleName.classList.add('vehicleName');
-		vehicleModel.classList.add('vehicleModel');
-		vehicleManufacturer.classList.add('vehicleManufacturer');
-		vehicleCrew.classList.add('vehicleCrew');
-		vehicleLength.classList.add('vehicleLength');
-		vehicleImage.classList.add('vehicleImage');
+		vehicleContainer.classList.add('contentContainer');
+		vehicleText.classList.add('contentText');
+		vehicleImage.classList.add('contentImage');
 
 		//ADDING IMAGES 
 		const imageName = vehicle.name.replace(/\s+/g, '-');

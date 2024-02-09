@@ -44,37 +44,26 @@ getData();
 function renderData(films) {
 	films.forEach(film => {
 		//CREATE ELEMENTS
-		const filmList = document.createElement('li');
-		const filmTitle = document.createElement('span');
-		const filmYear = document.createElement('span');
-		const filmDirector = document.createElement('span');
-		const filmProducers = document.createElement('span');
-		const filmCharacters = document.createElement('span');
+		const filmContainer = document.createElement('div');
+		const filmText = document.createElement('div');
 		const filmImage = document.createElement('img');
 
 		//APPEND ELEMENTS
-		ul.append(filmList);
-		filmList.append(filmTitle, filmYear, filmDirector, filmProducers, filmCharacters, filmImage);
+		subContainer.append(filmContainer);
+		filmContainer.append(filmText, filmImage);
 
-		//SETTING CONTENT TO CREATED ELEMENTS
-		filmTitle.textContent = film.title;
 		//I WANT JUST THE YEAR AND NOT THE DATE
-		//USING SPLIT METHOD TO SEPERATE WHERE THE '-' IS AND JUST USING THE FIRST PART (YEAR) 
+		//USING SPLIT METHOD TO SEPERATE WHERE THE '-' IS AND JUST USING THE FIRST PART (YEAR)
 		const releaseYear = film.release_date.split('-')[0];
-        filmYear.textContent = releaseYear;
-		filmDirector.textContent = film.director;
-		filmProducers.textContent = film.producer;
-		filmCharacters.textContent = film.characters.length;
+		
+		//SETTING CONTENT TO CREATED ELEMENTS
+		filmText.textContent = `Title: ${film.title}, Year: ${releaseYear}, Director: ${film.director}, Producer: ${film.producer}, Characters: ${film.characters.length}`;
 
 		//ADDING CLASSES TO THE ELEMENTS
-		filmList.classList.add('createdList');
-		filmTitle.classList.add('filmTitle');
-		filmYear.classList.add('filmYear');
-		filmDirector.classList.add('filmDirector');
-		filmProducers.classList.add('filmProducers');
-		filmCharacters.classList.add('filmCharacters');
-		filmImage.classList.add('filmImage');
-
+		filmContainer.classList.add('contentContainer');
+		filmText.classList.add('contentText');
+		filmImage.classList.add('contentImage');
+		
 		//ADDING IMAGES 
 		const imageName = film.title.replace(/\s+/g, '-');
         filmImage.src = `./assets/${imageName}.jpg`;
