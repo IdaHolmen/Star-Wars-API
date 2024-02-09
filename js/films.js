@@ -67,6 +67,7 @@ function renderData(films) {
 		//ADDING IMAGES 
 		const imageName = film.title.replace(/\s+/g, '-');
         filmImage.src = `./assets/${imageName}.jpg`;
+		filmImage.alt = 'Movie poster';
 	});
 }
 

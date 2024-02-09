@@ -64,6 +64,7 @@ function renderData(vehicles) {
 		//ADDING IMAGES 
 		const imageName = vehicle.name.replace(/\s+/g, '-');
         vehicleImage.src = `./assets/${imageName}.jpg`;
+		vehicleImage.alt = 'Vehicles';
 
 		//ONE IMAGE HAS TO BE ADDED MANUALLY BECAUSE OF THE NAMING
 		if (index === 3) {

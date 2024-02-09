@@ -62,6 +62,7 @@ function renderData(people) {
 		//ADDING IMAGES 
 		const imageName = person.name.replace(/\s+/g, '-');
         personImage.src = `./assets/${imageName}.jpg`;
+		personImage.alt = 'Different characters from Star Wars';
 	});
 }
 

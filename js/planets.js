@@ -63,6 +63,7 @@ function renderData(planets) {
 		//ADDING IMAGES 
 		const imageName = planet.name.replace(/\s+/g, '-');
         planetImage.src = `./assets/${imageName}.jpg`;
+		planetImage.alt = 'Planets';
 	});
 }
 
