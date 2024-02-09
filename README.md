@@ -20,3 +20,8 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 
 
 
+<img width="1470" alt="Screenshot 2024-02-09 at 15 04 07" src="https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/9244696a-e095-48d5-a782-9b6c4a0cbfec">
+Front page where you can choose which category to learn more about.
+
+<img width="1470" alt="Screenshot 2024-02-09 at 15 03 56" src="https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/3b9dbf69-4d46-489d-b510-38e738492d04">
+Example picture
