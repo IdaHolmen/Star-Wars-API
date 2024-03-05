@@ -62,11 +62,16 @@
 		grid-column: 3 / 4;
 		width: 3rem;
 		height: 2rem;
+		font-size: var(--font-size-base);
 		margin-right: var(--spacing-base);
+	}
+
+	.headline {
+		font-size: var(--font-size-medium);
 	}
 	
 	.headline-content {
-		font-size: var(--font-size-medium-small);
+		font-size: var(--font-size-small);
 	}
 
 	.back-button {	

@@ -33,10 +33,18 @@
 .links {
 	font-size: var(--font-size-large);
 	cursor: pointer;
+	
 }
 
 .links:hover {
-	color: var(--color-accent);
+	color: #fff;
+	text-shadow:
+		0 0 7px var(--color-accent),
+		0 0 10px var(--color-accent),
+		0 0 21px var(--color-accent),
+		0 0 32px var(--color-accent),
+		0 0 42px var(--color-accent),
+		0 0 52px var(--color-accent);
 }
 
 .film-link {
@@ -75,16 +83,24 @@
 
 .back-button {
 	grid-column: 2 / 3;
-	background: var(--button-color-back);
-	width: 6rem;
+	background: none;
+	color: var(--color-tertiary);
+	width: 10rem;
 	height: 3rem;
+	font-size: var(--font-size-small);
 	border-radius: var(--border-radius-normal);
 	border: var(--border-white);
 	margin: auto;
 }
 
 .back-button:hover {
-	background: var(--button-color-back-hover);
+	color: #fff;
+	text-shadow:
+		0 0 7px var(--color-tertiary),
+		0 0 10px var(--color-tertiary),
+		0 0 21px var(--color-tertiary),
+		0 0 32px var(--color-tertiary),
+		0 0 42px var(--color-tertiary);
 }
 
 

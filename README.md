@@ -18,6 +18,12 @@ https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-i
 CSS for the loader is from here:
 https://www.w3schools.com/howto/howto_css_loader.asp
 
+CSS for the neon effect:
+https://css-tricks.com/how-to-create-neon-text-with-css/
+
+Font for headlines
+https://www.cdnfonts.com/star-wars.font
+
 
 ![Screenshot-front-page](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/94e7bc4f-b03e-4771-a7a6-9c9bac29dfe5)
 Front page where you can choose which category to learn more about.
