@@ -24,9 +24,11 @@ https://css-tricks.com/how-to-create-neon-text-with-css/
 Font for headlines
 https://www.cdnfonts.com/star-wars.font
 
+<img width="1467" alt="Screenshot 2024-05-09 at 21 16 53" src="https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/1f2b4746-ec53-44de-bb0f-fbfda5a57e04">
+Main page where you can choose between four different categories.
 
-![Screenshot-front-page](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/94e7bc4f-b03e-4771-a7a6-9c9bac29dfe5)
-Front page where you can choose which category to learn more about.
+<img width="1470" alt="Screenshot 2024-05-09 at 21 17 45" src="https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/3e50ee95-2890-4eda-b833-c5d1d14add84">
+Example image
 
-![Screenshot-films](https://github.com/IdaHolmen/Star-Wars-API/assets/143997448/0c5d7ed9-f818-43bf-b367-85a98e71d8a8)
-Example picture
+
+
