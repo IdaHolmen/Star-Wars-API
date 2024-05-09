@@ -9,6 +9,9 @@ This is a study project and is not used commercially.
 Link to GitHub-repository:
 https://github.com/IdaHolmen/Star-Wars-API
 
+Link to deployed page on Netlify:
+https://fastidious-cheesecake-2c89d0.netlify.app
+
 
 Links that I have used in this project:
 
