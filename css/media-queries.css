@@ -32,6 +32,7 @@
 		flex-wrap: nowrap;
 		gap: var(--spacing-small);
 		justify-content: flex-start;
+		padding: 1rem;
 	}
 
 	.contentContainer {

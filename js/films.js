@@ -43,13 +43,13 @@ function renderData(films) {
 	films.forEach((film) => {
 		//CREATE ELEMENTS
 		const filmContainer = document.createElement('div');
-		const infoSection = document.createElement('div');
+		const infoSection = document.createElement('ul');
 		const imageSection = document.createElement('div');
-		const filmTitle = document.createElement('span');
-		const filmYear = document.createElement('span');
-		const filmDirector = document.createElement('span');
-		const filmProducer = document.createElement('span');
-		const filmCharacters = document.createElement('span');
+		const filmTitle = document.createElement('li');
+		const filmYear = document.createElement('li');
+		const filmDirector = document.createElement('li');
+		const filmProducer = document.createElement('li');
+		const filmCharacters = document.createElement('li');
 		const filmImage = document.createElement('img');
 
 		//APPEND ELEMENTS
@@ -74,7 +74,7 @@ function renderData(films) {
 		filmYear.textContent = `Year: ${releaseYear}`;
 		filmDirector.textContent = `Director: ${film.director}`;
 		filmProducer.textContent = `Producer: ${film.producer}`;
-		filmCharacters.textContent = `Characters: ${film.characters.length}`;
+		filmCharacters.textContent = `Number of Characters: ${film.characters.length}`;
 
 		//ADDING CLASSES TO THE ELEMENTS
 		filmContainer.classList.add('contentContainer');

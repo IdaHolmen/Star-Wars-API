@@ -32,6 +32,7 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 	flex-basis: 75%;
+	margin-top: var(--spacing-medium);
 }
 
 .links {
@@ -48,22 +49,22 @@
 
 .film-link {
 	grid-column: 2 / 3;
-	grid-row: 2 / 3;
+	grid-row: 1 / 2;
 }
 
 .planets-link {
 	grid-column: 4 / 5;
-	grid-row: 2 / 3;
+	grid-row: 1 / 2;
 }
 
 .people-link {
 	grid-column: 2 / 3;
-	grid-row: 4 / 5;
+	grid-row: 3 / 4;
 }
 
 .vehicle-link {
 	grid-column: 4 / 5;
-	grid-row: 4 / 5;
+	grid-row: 3 / 4;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -197,14 +198,19 @@ img {
 }
 
 /* A LOADER SO THAT USERS KNOW ITS LOADING*/
+/* THOUGHT IT WOULD BE COOL IF IT LOOKED A LITTLE LIKE A SUN */
 .loader {
 	margin-top: var(--spacing-medium-large);
-	border: 0.75rem solid var(--color-tertiary); /* Changed it to Star Wars colors*/
+	border: 0.75rem solid var(--color-primary);
 	border-top: 0.75rem solid var(--color-secondary);
 	border-radius: 50%;
 	width: 7.5rem;
 	height: 7.5rem;
 	animation: spin 2s linear infinite;
+	background: var(--color-tertiary);
+	box-shadow: 0 0 7px var(--color-tertiary), 0 0 10px var(--color-tertiary),
+		0 0 21px var(--color-tertiary), 0 0 32px var(--color-tertiary),
+		0 0 42px var(--color-tertiary);
 }
 
 @keyframes spin {
