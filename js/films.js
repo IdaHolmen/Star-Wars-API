@@ -1,9 +1,8 @@
 const subContainer = document.querySelector('.sub-container');
-const ul = document.querySelector('ul');
 
 //MAKING BACK BUTTON FUNCTIONAL
 const backButton = document.querySelector('.back-button');
-backButton.addEventListener('click', ()=> {
+backButton.addEventListener('click', () => {
 	window.location.href = 'index.html';
 });
 
@@ -16,16 +15,15 @@ subContainer.append(pageLoader);
 const getData = async () => {
 	try {
 		const response = await fetch('https://swapi.dev/api/films/');
-		const data = await response.json()
+		const data = await response.json();
 		const films = data.results;
 
 		subContainer.removeChild(pageLoader);
 		renderData(films);
-
 	} catch (error) {
 		const errorMessage = document.createElement('div');
 		errorMessage.classList.add('error-message');
-		errorMessage.textContent = 'An error has occurred. Please try again!'
+		errorMessage.textContent = 'An error has occurred. Please try again!';
 		subContainer.append(errorMessage);
 
 		const refreshButton = document.createElement('button');
@@ -33,42 +31,65 @@ const getData = async () => {
 		refreshButton.textContent = 'Refresh';
 		subContainer.append(refreshButton);
 
-		refreshButton.addEventListener('click', ()=> {
-			window.location.reload()
+		refreshButton.addEventListener('click', () => {
+			window.location.reload();
 		});
 		subContainer.removeChild(pageLoader);
-	};
-}
+	}
+};
 getData();
 
 function renderData(films) {
-	films.forEach(film => {
+	films.forEach((film) => {
 		//CREATE ELEMENTS
 		const filmContainer = document.createElement('div');
-		const filmText = document.createElement('div');
+		const infoSection = document.createElement('div');
+		const imageSection = document.createElement('div');
+		const filmTitle = document.createElement('span');
+		const filmYear = document.createElement('span');
+		const filmDirector = document.createElement('span');
+		const filmProducer = document.createElement('span');
+		const filmCharacters = document.createElement('span');
 		const filmImage = document.createElement('img');
 
 		//APPEND ELEMENTS
 		subContainer.append(filmContainer);
-		filmContainer.append(filmText, filmImage);
+		filmContainer.append(infoSection, imageSection);
+		infoSection.append(
+			filmTitle,
+			filmYear,
+			filmDirector,
+			filmProducer,
+			filmCharacters,
+			filmImage
+		);
+		imageSection.append(filmImage);
 
 		//I WANT JUST THE YEAR AND NOT THE DATE
 		//USING SPLIT METHOD TO SEPERATE WHERE THE '-' IS AND JUST USING THE FIRST PART (YEAR)
 		const releaseYear = film.release_date.split('-')[0];
-		
+
 		//SETTING CONTENT TO CREATED ELEMENTS
-		filmText.textContent = `Title: ${film.title}, Year: ${releaseYear}, Director: ${film.director}, Producer: ${film.producer}, Characters: ${film.characters.length}`;
+		filmTitle.textContent = `Title: ${film.title}`;
+		filmYear.textContent = `Year: ${releaseYear}`;
+		filmDirector.textContent = `Director: ${film.director}`;
+		filmProducer.textContent = `Producer: ${film.producer}`;
+		filmCharacters.textContent = `Characters: ${film.characters.length}`;
 
 		//ADDING CLASSES TO THE ELEMENTS
 		filmContainer.classList.add('contentContainer');
-		filmText.classList.add('contentText');
+		infoSection.classList.add('infoSection');
+		imageSection.classList.add('imageSection');
+		filmTitle.classList.add('contentText');
+		filmYear.classList.add('contentText');
+		filmDirector.classList.add('contentText');
+		filmProducer.classList.add('contentText');
+		filmCharacters.classList.add('contentText');
 		filmImage.classList.add('contentImage');
-		
-		//ADDING IMAGES 
+
+		//ADDING IMAGES
 		const imageName = film.title.replace(/\s+/g, '-');
-        filmImage.src = `./assets/${imageName}.jpg`;
+		filmImage.src = `./assets/${imageName}.jpg`;
 		filmImage.alt = 'Movie poster';
 	});
 }
-
-

@@ -5,13 +5,8 @@
 
 :root {
 	/*FONTS*/
-	--font-family-headlines: 'Star Wars', sans-serif;;
-	--font-family-data-text: "Inter", sans-serif;
-
-	/*BACKGROUNDS*/
-	--background-image-desktop: url('../assets/starship2.webp');
-	--background-image-tablet: url('../assets/stars-tablet-2.webp');
-	--background-image-mobile: url('../assets/mobile-layout-stars.webp');
+	--font-family-headlines: 'Star Wars', sans-serif;
+	--font-family-data-text: 'Inter', sans-serif;
 
 	/*COLORS*/
 	--color-primary: white;
@@ -20,14 +15,13 @@
 	--color-accent: red;
 	--background-color-error: rgba(253, 232, 232, 0.773);
 	--background-color-container: rgba(211, 211, 211, 0.843);
-	--button-color-back: linear-gradient(#37F3FF, #C1FBFF);
+	--button-color-back: linear-gradient(#37f3ff, #c1fbff);
 	--button-color-back-hover: linear-gradient(#17bfca, #a5ebf0);
 	--button-color-refresh: #55a630;
 	--button-color-refresh-hover: #83c066;
 	--button-color-refresh-active: #357d14;
 
 	/*FONT SIZES*/
-	--font-size-xxl: 6rem;
 	--font-size-xl: 5rem;
 	--font-size-large: 4rem;
 	--font-size-medium: 3rem;

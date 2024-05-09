@@ -1,11 +1,12 @@
 /*MAIN PAGE STYLING*/
-.main-page, .main-container {
+.main-page,
+.main-container {
 	font-family: var(--font-family-headlines);
-	background-image: var(--background-image-desktop);
+	background-image: url('../assets/mobile-layout-stars.webp');
 	background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
 	color: var(--color-primary);
 	display: flex;
 	flex-direction: column;
@@ -13,14 +14,16 @@
 }
 
 .headline {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xl);
 	color: var(--color-tertiary);
+	flex-basis: 10%;
 }
 
 .info-text {
 	font-size: var(--font-size-small);
 	text-align: center;
 	margin-bottom: var(--spacing-base);
+	flex-basis: 15%;
 }
 
 .link-container {
@@ -28,23 +31,19 @@
 	gap: var(--spacing-base);
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr);
+	flex-basis: 75%;
 }
 
 .links {
 	font-size: var(--font-size-large);
 	cursor: pointer;
-	
 }
 
 .links:hover {
 	color: #fff;
-	text-shadow:
-		0 0 7px var(--color-accent),
-		0 0 10px var(--color-accent),
-		0 0 21px var(--color-accent),
-		0 0 32px var(--color-accent),
-		0 0 42px var(--color-accent),
-		0 0 52px var(--color-accent);
+	text-shadow: 0 0 7px var(--color-accent), 0 0 10px var(--color-accent),
+		0 0 21px var(--color-accent), 0 0 32px var(--color-accent),
+		0 0 42px var(--color-accent), 0 0 52px var(--color-accent);
 }
 
 .film-link {
@@ -57,7 +56,7 @@
 	grid-row: 2 / 3;
 }
 
-.people-link  {
+.people-link {
 	grid-column: 2 / 3;
 	grid-row: 4 / 5;
 }
@@ -71,76 +70,97 @@
 /* GENERAL STYLING FOR FILMS, PLANETS, PEOPLE AND VEHICLES
 /*HEADER*/
 .header {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	margin-bottom: var(--spacing-medium);
+	width: 100%;
+	display: flex;
+	flex-basis: 10%;
+}
+
+.header-button-section {
+	flex-basis: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headline-section {
+	flex-basis: 40%;
+}
+
+.spacing-section {
+	flex-basis: 30%;
 }
 
 .headline-content {
 	font-size: var(--font-size-large);
-	grid-column: 4 / 5;
+	text-align: center;
 }
 
 .back-button {
-	grid-column: 2 / 3;
 	background: none;
 	color: var(--color-tertiary);
 	width: 10rem;
 	height: 3rem;
 	font-size: var(--font-size-small);
-	border-radius: var(--border-radius-normal);
-	border: var(--border-white);
-	margin: auto;
 }
 
 .back-button:hover {
 	color: #fff;
-	text-shadow:
-		0 0 7px var(--color-tertiary),
-		0 0 10px var(--color-tertiary),
-		0 0 21px var(--color-tertiary),
-		0 0 32px var(--color-tertiary),
+	text-shadow: 0 0 7px var(--color-tertiary), 0 0 10px var(--color-tertiary),
+		0 0 21px var(--color-tertiary), 0 0 32px var(--color-tertiary),
 		0 0 42px var(--color-tertiary);
 }
 
-
 /*PAGE CONTENT*/
 .sub-container {
+	flex-basis: 90%;
 	width: 100%;
-	height: 80%;
+	height: 700px;
 	display: flex;
 	gap: var(--spacing-medium-small);
 	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
-	font-family: var(--font-family-data-text); /*USING INTER FOR BETTER READABILITY*/
+	font-family: var(
+		--font-family-data-text
+	); /*USING INTER FOR BETTER READABILITY*/
 }
 
 .contentContainer {
 	background-color: var(--background-color-container);
 	border-radius: var(--border-radius-normal);
-	height: 10rem;
+	height: 11rem;
 	width: 28.125rem;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
+}
+
+.infoSection {
+	flex-basis: 85%;
+	display: flex;
+	flex-direction: column;
+}
+
+.imageSection {
+	flex-basis: 15%;
 }
 
 .contentText {
 	color: var(--color-secondary);
 	font-size: var(--font-size-very-tiny);
 	font-weight: 500;
-	padding: var(--spacing-small);
+	margin-left: var(--spacing-small);
 }
 
-.contentImage, img{
-	margin-right: var(--spacing-base);
+.contentImage,
+img {
+	margin-right: var(--spacing-small);
 	max-width: 6.25rem;
 	height: 6.25rem;
 	border-radius: var(--border-radius-normal);
 }
 
-
-/*IN CASE OF ERROR*/ 
+/*IN CASE OF ERROR*/
 .error-message {
 	color: var(--color-accent);
 	background-color: var(--background-color-error);
@@ -155,12 +175,9 @@
 .refresh-button {
 	font-family: var(--font-family-headlines);
 	font-size: var(--font-size-very-tiny);
-	background-image: url(../assets/arrows-rotate-light.svg);
-	background-size: 20%;
-	background-position: right 50%;
-	background-repeat: no-repeat;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	height: 3rem;
 	width: 8rem;
 	background-color: var(--button-color-refresh);
@@ -188,10 +205,13 @@
 	width: 7.5rem;
 	height: 7.5rem;
 	animation: spin 2s linear infinite;
-  }
-  
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
 }
 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
